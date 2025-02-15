@@ -22,7 +22,20 @@ for model in models:
 os.mkdir("results")
 
 # Iterate over all modules, create individual result directories, and run the TCL script
+data_files = [] #only append implemented files in the data files list
+
 for filename in models:
-    os.mkdir("results/" + filename[:-2])  # Create a directory for each module
-    os.system("vivado -mode batch -source  tcl_run.tcl -tclargs {}".format(filename))  # Run TCL script
-    print("{} completed".format(filename))  # Print completion message
+    os.mkdir("results/"+filename[:-2])
+    os.system("vivado -mode batch -source  tcl_run.tcl -tclargs {}".format(filename))
+    synth_file = open("synth_status", "r")
+    synth_status = synth_file.read().split()[-1]
+    if synth_status == "ERROR":
+        print(f"Synthesis failed for {filename}")
+        continue
+    impl_file = open("impl_status", "r")
+    impl_status = impl_file.read().split()[-1]
+    if impl_status == "ERROR":
+        print(f"Implementation failed for {filename}")
+        continue
+    data_files.append(filename[:-2])
+    print("{} reported".format(filename)) 
