@@ -1,0 +1,4 @@
+,assignment_2_lab_ds,binary_multiplier,bin_to_gray,counter_4bit,mealy,moore,MUX,shift_reg,toggle_ff,adder_1bit
+Power,3.836,13.675,3.836,3.812,0.231,0.231,0.231,0.231,0.231,1.034
+Delay,6.158,10.976,6.158,4.314,5.327,5.327,5.327,5.327,5.327,5.896
+LUTs,4,69,4,5,3,3,3,3,3,1

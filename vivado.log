@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Feb 15 19:41:08 2025
+# Process ID: 17656
+# Current directory: c:/Users/Siddharth/Desktop/IC_design_lab_4/scripting-and-automation
+# Command line: vivado.exe -mode batch -source tcl_add.tcl -tclargs counter_4bit.v
+# Log file: c:/Users/Siddharth/Desktop/IC_design_lab_4/scripting-and-automation/vivado.log
+# Journal file: c:/Users/Siddharth/Desktop/IC_design_lab_4/scripting-and-automation\vivado.jou
+#-----------------------------------------------------------
+source tcl_add.tcl
+# open_project [pwd]/Automation/Project_1.xpr
+Scanning sources...
+Finished scanning sources
+# add_files -norecurse [pwd]/Modules/[lindex $argv 0]
+# update_compile_order -fileset sources_1
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 15 19:41:18 2025...
